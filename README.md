@@ -47,7 +47,7 @@ First, we start with a simple text file containing a secret message.
 Next, we run the `encrypt` command in the terminal. It securely prompts for a password (which is hidden as you type).
      
    **Example Command:**
-      ```bash
+      ```
       python AES.py encrypt -i <input_file> -o <output_file>
       ```
       
@@ -68,7 +68,7 @@ The script produces a `.bin` file. The data is now unreadable, authenticated cip
 We run the `decrypt` command, using the same password.
 
 **Example Command:**
-      ```bash
+      ```
       python AES.py decrypt -i <input_file> -o <output_file>
       ```
       
@@ -92,7 +92,7 @@ Here is what happens if you use the **wrong password**. The script instantly fai
 
 ### 1. Installation
 Install the required library:
-```bash
+```
 python -m pip install pycryptodome
 ```
 
