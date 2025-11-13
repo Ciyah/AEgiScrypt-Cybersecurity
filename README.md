@@ -31,6 +31,8 @@ This is a command-line utility for secure file encryption and decryption. This p
 
 ---
 
+
+
 ## 📸 Demo
 Here is a step-by-step example of the script in action.
 
@@ -43,7 +45,12 @@ First, we start with a simple text file containing a secret message.
 ---
 ### 2. Running the Encrypt Command
 Next, we run the `encrypt` command in the terminal. It securely prompts for a password (which is hidden as you type).
-
+     
+   **Example Command:**
+      ```bash
+      python AES.py encrypt -i <input_file> -o <output_file>
+      ```
+      
 <img width="1185" height="72" alt="image" src="https://github.com/user-attachments/assets/2c56ef55-7a2c-45ba-9114-1113d2f08a1c" />
 
 Example the password  i have used is  **Ciyah123**
@@ -60,6 +67,11 @@ The script produces a `.bin` file. The data is now unreadable, authenticated cip
 ### 4. Running the Decrypt Command
 We run the `decrypt` command, using the same password.
 
+**Example Command:**
+      ```bash
+      python AES.py decrypt -i <input_file> -o <output_file>
+      ```
+      
 <img width="1202" height="65" alt="image" src="https://github.com/user-attachments/assets/76ce8ccf-c7a4-46a5-95fc-7def529de0e3" />
 
 
