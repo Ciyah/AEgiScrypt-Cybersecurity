@@ -82,3 +82,24 @@ Here is what happens if you use the **wrong password**. The script instantly fai
 Install the required library:
 ```bash
 python -m pip install pycryptodome
+
+
+---
+
+
+## 📦 Creating a Standalone Executable
+You can bundle this script into a **single executable** for your operating system so you can run it without needing to install Python.
+
+**Note:** You must build the executable on the target operating system.
+* Run the command on **Windows** to create a `.exe` file.
+* Run the command on **macOS** to create a Unix executable file.
+
+---
+### 1. Install PyInstaller
+First, install PyInstaller on the machine:
+```bash
+# On Windows
+python -m pip install pyinstaller
+
+# On macOS
+python3 -m pip install pyinstaller
