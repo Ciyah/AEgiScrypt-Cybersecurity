@@ -1,5 +1,5 @@
 # AES-Encrypt-Decrypt 🔐
-> A Python CLI tool for secure file encryption/decryption using AES-256-GCM, PBKDF2, and a random salt.
+> 🔐A Secure file encryption/decryption CLI tool using AES-256-GCM, PBKDF2, and a random salt.
 
 ---
 
@@ -9,10 +9,16 @@ This is a command-line utility for secure file encryption and decryption. This p
 ---
 
 ## ✨ Key Features
-* **🔒 AES-256-GCM Mode:** Uses an Authenticated Encryption with Associated Data (AEAD) cipher. This not only encrypts the data but also creates an **authentication tag**. If the data is tampered with (even by one bit) or the key is wrong, decryption will fail.
+* **🔒 AES-256-GCM Mode:** GCM stands for **Galois/Counter Mode**. It is a modern, high-performance mode of operation for AES that provides **Authenticated Encryption (AEAD)**. This means it delivers two critical security guarantees at once:
+    * **Confidentiality:** It encrypts the data so no one can read it.
+    * **Authenticity & Integrity:** It creates a special **authentication tag** (a MAC). During decryption, if the key is wrong *or* if the data has been tamtpered with (even by one bit), this check will fail and the script will stop. This prevents the user from accidentally decrypting a corrupted or malicious file.
+
 * **🔑 Strong Key Derivation (PBKDF2):** Never uses the password directly as the key. It uses PBKDF2 (Password-Based Key Derivation Function 2) with 100,000 iterations to "stretch" the password into a robust 256-bit cryptographic key.
+
 * **🧂 Random Salt:** A unique, 16-byte salt is generated for every encryption. This protects against rainbow table attacks and ensures that encrypting the same file with the same password will result in a different ciphertext every time.
+
 * **🤫 Secure Password Entry:** Uses the `getpass` module to securely prompt for a password, so it isn't shown on the screen or stored in your shell history.
+
 * **🖥️ User-Friendly CLI:** Built with `argparse` to provide clear `encrypt` and `decrypt` sub-commands.
 
 ---
